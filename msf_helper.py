@@ -1,10 +1,10 @@
 # msf_helper.py
+import os
 from msfrpc import MsfRpcClient
 
 class MetasploitHelper:
-    def __init__(self, password='your_msf_password'):
-        # Initialize RPC connection to Metasploit
-        self.client = MsfRpcClient(password, ssl=True)
+    def __init__(self):
+        self.client = MsfRpcClient(os.getenv("MSF_PASSWORD"), ssl=True)
 
     def get_exploits(self):
         # Retrieve available exploits
