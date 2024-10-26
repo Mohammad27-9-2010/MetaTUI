@@ -1,6 +1,6 @@
 # msf_helper.py
 import os
-from msfrpc import MsfRpcClient
+from pymetasploit3.msfrpc import MsfRpcClient
 
 class MetasploitHelper:
     def __init__(self):
